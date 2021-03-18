@@ -1,0 +1,137 @@
+{
+    "response_code": 1,
+    "results": [
+        {
+            "id": 1,
+            "category": "Laravel",
+            "question": "Wat is Laravel?",
+            "correct_answer": "Een PHP Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 2,
+            "category": "Laravel",
+            "question": "Welke structuur gebruikt laravel?",
+            "correct_answer": "MVC",
+            "incorrect_answers": [
+                "CAV",
+                "CSS",
+                "MAC"
+            ]
+        },
+        {
+            "id": 3,
+            "category": "Laravel",
+            "question": "Wie is de maker van Laravel?",
+            "correct_answer": "Taylor Otwell",
+            "incorrect_answers": [
+                "Barack Obama",
+                "Rasmus Lerdorf",
+                "Olivier Stone"
+            ]
+        },
+        {
+            "id": 4,
+            "category": "Laravel",
+            "question": "Waarvoor gebruik je een $fillable in een Laravel Model?",
+            "correct_answer": "De $fillable kan je overal aanspreken met de juiste variabele",
+            "incorrect_answers": [
+                "De $fillable vult de dingen automatisch aan wanneer je de variable meegeeft",
+                "Wanneer je deze variabele aanspreekt weet Laravel dat je iets automatisch wil vullen",
+                "Geen van bovenstaande"
+            ]
+        },
+        {
+            "id": 5,
+            "category": "Vue",
+            "question": "Wat is Vuejs?",
+            "correct_answer": "Een JavaScript Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een Bootstrap Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 6,
+            "category": "Vue",
+            "question": "Waarvoor word Vuejs vooral gebruikt?",
+            "correct_answer": "Dynamische websites",
+            "incorrect_answers": [
+                "Het tonen van informatie",
+                "Niks...",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 7,
+            "category": "Vue",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 8,
+            "category": "Livewire",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 9,
+            "category": "Livewire",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 10,
+            "category": "Livewire",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 11,
+            "category": "Livewire",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        },
+        {
+            "id": 12,
+            "category": "Livewire",
+            "question": "Wat is Laravel Livewire?",
+            "correct_answer": "Een Laravel Framework",
+            "incorrect_answers": [
+                "Een Css Framework",
+                "Een JavaScript Framework",
+                "Een TypeScript Framework"
+            ]
+        }
+    ]
+}

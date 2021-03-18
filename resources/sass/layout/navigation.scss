@@ -1,0 +1,48 @@
+#navigation {
+    width: 18%;
+    position: relative;
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(235, 0, 157);
+        height: 100vh;
+        width: 18%;
+        .navigation-list {
+            list-style: none;
+            font-size: $font-size-normal;
+            font-style: $quicksand;
+            .navigation-item {
+                display: flex;
+                flex-direction: row;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                justify-content: space-between;
+                &-icon {
+                    width: 60px;
+                    height: 60px;
+                    background: white;
+                    justify-content: center;
+                    text-align: center;
+                    position: relative;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                i {
+                    color: rgb(235, 0, 157);
+                    vertical-align: -webkit-baseline-middle;
+                }
+                a {
+                    color: white;
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
