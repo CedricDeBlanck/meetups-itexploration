@@ -37,12 +37,12 @@
         {
             "id": 4,
             "category": "Laravel",
-            "question": "Waarvoor gebruik je een $fillable in een Laravel Model?",
-            "correct_answer": "De $fillable kan je overal aanspreken met de juiste variabele",
+            "question": "Welke code snippet is juist?",
+            "correct_answer": "Example::where(example, 1)->get();",
             "incorrect_answers": [
-                "De $fillable vult de dingen automatisch aan wanneer je de variable meegeeft",
-                "Wanneer je deze variabele aanspreekt weet Laravel dat je iets automatisch wil vullen",
-                "Geen van bovenstaande"
+                "Example:Where(example, 1)->get();",
+                "Example::where->get();",
+                "Example = where(example, 1)->get();"
             ]
         },
         {
