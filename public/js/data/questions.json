@@ -37,12 +37,12 @@
         {
             "id": 4,
             "category": "Laravel",
-            "question": "Welke code snippet is juist?",
-            "correct_answer": "Example::where(example, 1)->get();",
+            "question": "Wat doet een controller",
+            "correct_answer": "Controllers zijn bedoeld om de bijhorende logica voor het afhandelen van verzoeken binnen een enkele klasse te groeperen.",
             "incorrect_answers": [
-                "Example:Where(example, 1)->get();",
-                "Example::where->get();",
-                "Example = where(example, 1)->get();"
+                "Controllers worden gebruikt om enkele functies aan te spreken bij het doorgeven van variabeles.",
+                "Controllers kunnen alleen data opvragen van de database",
+                "Controllers kunnen geen van bovenstaande dingen."
             ]
         },
         {
@@ -70,67 +70,67 @@
         {
             "id": 7,
             "category": "Vue",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "question": "Wie heeft Vue gemaakt?",
+            "correct_answer": "Evan You",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "Donald Trump",
+                "Taylor Otwell",
+                "Jamie Bolters"
             ]
         },
         {
             "id": 8,
-            "category": "Livewire",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "category": "Vue",
+            "question": "In welk jaar is Vue voor het eerst gecommit?",
+            "correct_answer": "2013",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "2009",
+                "2012",
+                "2014"
             ]
         },
         {
             "id": 9,
             "category": "Livewire",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "question": "Lijken Livewire componenten op Laravel controllers?",
+            "correct_answer": "Ja",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "Nee",
+                "Misschien",
+                "Geen van de 3"
             ]
         },
         {
             "id": 10,
             "category": "Livewire",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "question": "Waar is livewire instaat in?",
+            "correct_answer": "Dingen te doen binnen de grenzen van laravel zonder javascript",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "Dingen te doen binnen de grenzen van laravel met javascript",
+                "Dingen te doen samen met Vue",
+                "Livewire kan helemaal niks"
             ]
         },
         {
             "id": 11,
             "category": "Livewire",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "question": "Livewire of Vue voor een project met veel re-rendering? Leg uit",
+            "correct_answer": "Vue, het is het beste framework om veel te kunnen re-renderen maar Livewire gaat sneller als het gaat om data uit de database op te halen",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "Vue, het is beter dan livewire omdat het sneller gaat en omdat je heel snel data uit de database kan opvragen",
+                "Livewire, het is het snelste framework en kan heel snel re-renderen en data uit de database halen.",
+                "Geen 1 van beide"
             ]
         },
         {
             "id": 12,
             "category": "Livewire",
-            "question": "Wat is Laravel Livewire?",
-            "correct_answer": "Een Laravel Framework",
+            "question": "Wat returned een livewire component?",
+            "correct_answer": "Een View met of zonder data",
             "incorrect_answers": [
-                "Een Css Framework",
-                "Een JavaScript Framework",
-                "Een TypeScript Framework"
+                "Een functionaliteit die je zelf kan maken",
+                "Geen van allemaal",
+                "Een Component die je kan hergebruiken"
             ]
         }
     ]

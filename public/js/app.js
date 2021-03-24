@@ -2018,14 +2018,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Quiz",
   data: function data() {
     return {
       questions: [],
       loading: true,
-      index: 0,
-      visible: false
+      index: 11,
+      visible: false,
+      finished: false,
+      correct: [],
+      category: null
     };
   },
   computed: {
@@ -2105,6 +2118,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.checkAnswer(event, index);
     },
     checkAnswer: function checkAnswer(event, index) {
+      var _this2 = this;
+
       var question = this.questions[index];
 
       if (question.userAnswer) {
@@ -2122,8 +2137,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }.bind(this), 3000);
         }
 
+        if (this.index + 1 == 12) {
+          setTimeout(function () {
+            _this2.finished = true;
+          }, 3000);
+        }
+
         if (question.userAnswer === question.correct_answer) {
           event.target.classList.add("rightAnswer");
+          this.correct.push(this.index);
           this.questions[index].rightAnswer = true;
         } else {
           event.target.classList.add("wrongAnswer");
@@ -2143,6 +2165,61 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     this.getQuestions();
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -6789,7 +6866,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#quiz-container[data-v-91549c66] {\n    margin: 1rem auto;\n    padding: 1rem;\n    max-width: 750px;\n}\n.title[data-v-91549c66] {\n    font-size: 3rem;\n    padding: 0.5rem;\n    color: rgb(153, 31, 153);\n    text-align: center;\n}\nh1[data-v-91549c66] {\n    font-size: 1.3rem;\n    padding: 0.7rem;\n}\n.divider[data-v-91549c66] {\n    margin: 0.5rem 0;\n    border: 1px solid rgba(102, 255, 166, 0.7);\n    border-radius: 2px;\n    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);\n}\nform[data-v-91549c66] {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n}\nbutton[data-v-91549c66] {\n    font-size: 1.1rem;\n    box-sizing: border-box;\n    padding: 1rem;\n    margin: 0.3rem;\n    width: 47%;\n    background-color: rgba(100, 100, 100, 0.3);\n    border: none;\n    border-radius: 0.4rem;\n    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);\n}\nbutoon[data-v-91549c66]:hover:enabled {\n    transform: scale(1.02);\n    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 0 3px 1px -1px rgba(0, 0, 0, 0.2);\n}\nbutton[data-v-91549c66]:focus {\n    outline: none;\n}\nbutton[data-v-91549c66]:active:enabled {\n    transform: scale(1.05);\n}\n@-webkit-keyframes flashButton-data-v-91549c66 {\n0% {\n        opacity: 1;\n        transform: scale(1.01);\n}\n50% {\n        opacity: 0.7;\n        transform: scale(1.02);\n}\n100% {\n        opacity: 1;\n        transform: scale(1);\n}\n}\n@keyframes flashButton-data-v-91549c66 {\n0% {\n        opacity: 1;\n        transform: scale(1.01);\n}\n50% {\n        opacity: 0.7;\n        transform: scale(1.02);\n}\n100% {\n        opacity: 1;\n        transform: scale(1);\n}\n}\nbutton.clicked[data-v-91549c66] {\n    pointer-events: none;\n}\nbutton.rightAnswer[data-v-91549c66] {\n    -webkit-animation: flashButton-data-v-91549c66;\n            animation: flashButton-data-v-91549c66;\n    -webkit-animation-duration: 700ms;\n            animation-duration: 700ms;\n    -webkit-animation-delay: 200ms;\n            animation-delay: 200ms;\n    -webkit-animation-iteration-count: 3;\n            animation-iteration-count: 3;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    color: black;\n    background: linear-gradient(210deg, rgba(0, 178, 72, 0.25), rgba(0, 178, 72, 0.5));\n}\nbutton.wrongAnswer[data-v-91549c66] {\n    color: black;\n    background: linear-gradient(210deg, rgba(245, 0, 87, 0.25), rgba(245, 0, 87, 0.5));\n}\nbutton.showRightAnswer[data-v-91549c66] {\n    -webkit-animation: flashButton-data-v-91549c66;\n            animation: flashButton-data-v-91549c66;\n    -webkit-animation-duration: 700ms;\n            animation-duration: 700ms;\n    -webkit-animation-delay: 200ms;\n            animation-delay: 200ms;\n    -webkit-animation-iteration-count: 2;\n            animation-iteration-count: 2;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    color: black;\n    background: linear-gradient(210deg, rgba(0, 178, 72, 0.25), rgba(0, 178, 72, 0.5));\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#quiz-container[data-v-91549c66] {\n    margin: 1rem auto;\n    padding: 1rem;\n    max-width: 750px;\n}\n.title[data-v-91549c66] {\n    font-size: 3rem;\n    padding: 0.5rem;\n    color: #eb009d;\n    text-align: center;\n}\nh1[data-v-91549c66] {\n    font-size: 1.3rem;\n    padding: 0.7rem;\n}\n.divider[data-v-91549c66] {\n    margin: 0.5rem 0;\n    border: 1px solid #eb009d;\n    border-radius: 2px;\n    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);\n}\nform[data-v-91549c66] {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n}\nbutton[data-v-91549c66] {\n    font-size: 1.1rem;\n    box-sizing: border-box;\n    padding: 1rem;\n    margin: 0.3rem;\n    width: 47%;\n    background-color: rgba(100, 100, 100, 0.3);\n    border: none;\n    border-radius: 0.4rem;\n    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);\n}\nbutoon[data-v-91549c66]:hover:enabled {\n    transform: scale(1.02);\n    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 0 3px 1px -1px rgba(0, 0, 0, 0.2);\n}\nbutton[data-v-91549c66]:focus {\n    outline: none;\n}\nbutton[data-v-91549c66]:active:enabled {\n    transform: scale(1.05);\n}\n@-webkit-keyframes flashButton-data-v-91549c66 {\n0% {\n        opacity: 1;\n        transform: scale(1.01);\n}\n50% {\n        opacity: 0.7;\n        transform: scale(1.02);\n}\n100% {\n        opacity: 1;\n        transform: scale(1);\n}\n}\n@keyframes flashButton-data-v-91549c66 {\n0% {\n        opacity: 1;\n        transform: scale(1.01);\n}\n50% {\n        opacity: 0.7;\n        transform: scale(1.02);\n}\n100% {\n        opacity: 1;\n        transform: scale(1);\n}\n}\nbutton.clicked[data-v-91549c66] {\n    pointer-events: none;\n}\nbutton.rightAnswer[data-v-91549c66] {\n    -webkit-animation: flashButton-data-v-91549c66;\n            animation: flashButton-data-v-91549c66;\n    -webkit-animation-duration: 700ms;\n            animation-duration: 700ms;\n    -webkit-animation-delay: 200ms;\n            animation-delay: 200ms;\n    -webkit-animation-iteration-count: 3;\n            animation-iteration-count: 3;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    color: black;\n    background: linear-gradient(210deg, rgba(0, 178, 72, 0.25), rgba(0, 178, 72, 0.5));\n}\nbutton.wrongAnswer[data-v-91549c66] {\n    color: black;\n    background: linear-gradient(210deg, rgba(245, 0, 87, 0.25), rgba(245, 0, 87, 0.5));\n}\nbutton.showRightAnswer[data-v-91549c66] {\n    -webkit-animation: flashButton-data-v-91549c66;\n            animation: flashButton-data-v-91549c66;\n    -webkit-animation-duration: 700ms;\n            animation-duration: 700ms;\n    -webkit-animation-delay: 200ms;\n            animation-delay: 200ms;\n    -webkit-animation-iteration-count: 2;\n            animation-iteration-count: 2;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    color: black;\n    background: linear-gradient(210deg, rgba(0, 178, 72, 0.25), rgba(0, 178, 72, 0.5));\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39079,15 +39156,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _IndexComponent_vue_vue_type_template_id_7cc62dce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=template&id=7cc62dce& */ "./resources/js/components/livewire/IndexComponent.vue?vue&type=template&id=7cc62dce&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _IndexComponent_vue_vue_type_template_id_7cc62dce___WEBPACK_IMPORTED_MODULE_0__.render,
   _IndexComponent_vue_vue_type_template_id_7cc62dce___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -39243,6 +39322,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuizComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./QuizComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/QuizComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuizComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./IndexComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/livewire/IndexComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -39582,81 +39677,131 @@ var render = function() {
   return _c("div", { attrs: { id: "quiz-container" } }, [
     _c("h1", { staticClass: "title" }, [_vm._v("ITExploration Quiz")]),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "progress_percentage",
-        staticStyle: { margin: "0 auto", width: "fit-content" }
-      },
-      [_vm._v(_vm._s(_vm.round) + " %")]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "progress_full",
-        staticStyle: {
-          width: "55%",
-          display: "flex",
-          "justify-content": "space-evenly",
-          margin: "0 auto"
-        }
-      },
-      [
-        _c(
+    _vm.finished
+      ? _c(
           "div",
-          {
-            staticClass: "progress_bar",
-            staticStyle: { width: "50%", margin: "0 auto" }
-          },
+          { staticStyle: { "text-align": "center", "margin-top": "150px" } },
           [
-            _c("div", {
-              staticClass: "progress",
-              staticStyle: { "background-color": "green" },
-              style: { width: (100 / 12) * this.index + "%" }
-            })
+            _c("img", {
+              staticStyle: { width: "400px", margin: "0 auto" },
+              attrs: { src: "/assets/celebrating.gif" }
+            }),
+            _vm._v(" "),
+            _c("h1", { staticStyle: { "font-size": "54px" } }, [
+              _vm._v("Quiz compleet!")
+            ]),
+            _vm._v(" "),
+            _c("div", {}, [
+              _c("h1", [
+                _vm._v(
+                  _vm._s(_vm.correct.length) +
+                    " / " +
+                    _vm._s(_vm.questions.length) +
+                    " juiste antwoorden!"
+                )
+              ])
+            ])
           ]
         )
-      ]
-    ),
-    _vm._v(" "),
-    _c("hr", { staticClass: "divider" }),
-    _vm._v(" "),
-    _c("h1", {
-      domProps: {
-        innerHTML: _vm._s(
-          _vm.loading
-            ? "Laden van vraag.."
-            : _vm.currentQuestion.id +
-                "/" +
-                _vm.questions.length +
-                " " +
-                _vm.currentQuestion.question
-        )
-      }
-    }),
-    _vm._v(" "),
-    _vm.currentQuestion
-      ? _c(
-          "form",
-          _vm._l(_vm.currentQuestion.answers, function(answer) {
-            return _c("button", {
-              key: answer,
-              attrs: { index: _vm.currentQuestion.key },
-              domProps: { innerHTML: _vm._s(answer) },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.handleButtonClick($event)
-                }
+      : _c("div", [
+          _c(
+            "div",
+            {
+              staticClass: "progress_percentage",
+              staticStyle: { margin: "0 auto", width: "fit-content" }
+            },
+            [_vm._v(_vm._s(_vm.round) + " %")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "progress_full",
+              staticStyle: {
+                width: "50%",
+                display: "flex",
+                "justify-content": "space-evenly",
+                margin: "0 auto",
+                "background-color": "lightgrey"
               }
-            })
-          }),
-          0
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c("hr", { staticClass: "divider" })
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "progress_bar",
+                  staticStyle: { width: "100%", margin: "0 auto" }
+                },
+                [
+                  _c("div", {
+                    staticClass: "progress",
+                    staticStyle: { "background-color": "green" },
+                    style: { width: (100 / 12) * this.index + "%" }
+                  })
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("hr", { staticClass: "divider" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticStyle: {
+                display: "flex",
+                "justify-content": "space-between"
+              }
+            },
+            [
+              _c("h1", {
+                domProps: {
+                  innerHTML: _vm._s(
+                    _vm.loading
+                      ? "Laden van vraag.."
+                      : _vm.currentQuestion.id +
+                          "/" +
+                          _vm.questions.length +
+                          " " +
+                          _vm.currentQuestion.question
+                  )
+                }
+              }),
+              _vm._v(" "),
+              _c("h1", {
+                domProps: {
+                  innerHTML: _vm._s(
+                    _vm.category
+                      ? ""
+                      : "Categorie: " + _vm.currentQuestion.category
+                  )
+                }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _vm.currentQuestion
+            ? _c(
+                "form",
+                _vm._l(_vm.currentQuestion.answers, function(answer) {
+                  return _c("button", {
+                    key: answer,
+                    attrs: { index: _vm.currentQuestion.key },
+                    domProps: { innerHTML: _vm._s(answer) },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.handleButtonClick($event)
+                      }
+                    }
+                  })
+                }),
+                0
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c("hr", { staticClass: "divider" })
+        ])
   ])
 }
 var staticRenderFns = []
@@ -39781,8 +39926,62 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page__title" }, [
-      _c("h1", [_vm._v("LiveWire")])
+    return _c("section", { staticClass: "page__section" }, [
+      _c("div", { staticClass: "page__title" }, [
+        _c("h1", [_vm._v("Laravel Livewire")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "page__title__line" })
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("div", { staticClass: "page__content" }, [
+          _c("h4", [_vm._v("Wat is Livewire?")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Laravel Livewire is een framework die het eenvoudig maakt om moderne, dynamische interfaces te bouwen met Laravel Blade als sjabloontaal. Dit is een geweldige stapel om uit te kiezen als je een applicatie wilt bouwen die dynamisch en reactief is, maar je niet op je gemak voelt om in een volledig JavaScript-framework als Vue.js te werken.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h4", [
+            _vm._v("\n                Wat kan Livewire?\n            ")
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Livewire is een full-stack framework dat het proces van het bouwen van dynamische interfaces in Laravel stroomlijnt. Kortom, het is in staat om dingen te doen binnen de grenzen van Laravel waarvoor voorheen JavaScript nodig was.                "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("Components")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Een component is een herbruikbaar onderdeel van de gebruikersinterface. Elk raamwerk behandelt componenten anders.\n\n                Een eenvoudige Livewire-component is een PHP-klasse die de Livewire-componentklasse uitbreidt en een Blade-bestand genereert.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticStyle: { width: "800px" } }, [
+            _c("img", {
+              attrs: { width: "100%", src: "/assets/livewire_1.png" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Dit is waar een eenvoudige livewire-component op lijkt en ja, het lijkt heel hard op een laravel controller die een view teruggeeft"
+            )
+          ]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("Conclusie met Vue")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Voor applicaties met veel re-rendering, Livewire is niet de het beste framework maar als je veel data nodig hebt van de database met minimale reactiviteit en het moet\n                allemaal zo snel mogelijk inladen? Dan zou je livewire wel een kans kunnen geven.\n            "
+            )
+          ])
+        ])
+      ])
     ])
   }
 ]

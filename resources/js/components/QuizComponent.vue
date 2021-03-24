@@ -1,26 +1,36 @@
 <template>
     <div id="quiz-container">
         <h1 class="title">ITExploration Quiz</h1>
-        <div class="progress_percentage" style="margin: 0 auto;width: fit-content;">{{ round }} %</div>
-        <div class="progress_full" style="width: 55%; display: flex; justify-content: space-evenly; margin: 0 auto;">
-            <div class="progress_bar" style="width:50%; margin: 0 auto;">
-                <div v-bind:style="{width: (100 / 12 * this.index) +'%'}" style="background-color: green;" class="progress"></div>
-            </div>
+        <div v-if="finished" style="text-align: center;margin-top: 150px;">
+            <img style="width: 400px; margin: 0 auto;" src="/assets/celebrating.gif">
+            <h1 style="font-size: 54px;">Quiz compleet!</h1>
+            <div class=""><h1>{{ correct.length }} / {{ questions.length }} juiste antwoorden!</h1></div>
         </div>
+        <div v-else>
+            <div class="progress_percentage" style="margin: 0 auto;width: fit-content;">{{ round }} %</div>
+            <div class="progress_full" style="width: 50%; display: flex; justify-content: space-evenly; margin: 0 auto;background-color: lightgrey">
+                <div class="progress_bar" style="width:100%; margin: 0 auto;">
+                    <div v-bind:style="{width: (100 / 12 * this.index) +'%'}" style="background-color: green;" class="progress"></div>
+                </div>
+            </div>
 
-        <hr class="divider" />
-        <h1 v-html="loading ? 'Laden van vraag..' : currentQuestion.id+'/'+questions.length + ' ' + currentQuestion.question"></h1>
-        <form v-if="currentQuestion">
-            <button
-                v-for="answer in currentQuestion.answers"
-                :index="currentQuestion.key"
-                :key="answer"
-                v-html="answer"
-                @click.prevent="handleButtonClick"
-            ></button>
-        </form>
-        
-        <hr class="divider" />
+            <hr class="divider" />
+            <div style="display: flex; justify-content: space-between;">
+                <h1 v-html="loading ? 'Laden van vraag..' : currentQuestion.id+'/'+questions.length + ' ' + currentQuestion.question"></h1>
+                <h1 v-html="category ? '' : 'Categorie: ' + currentQuestion.category"></h1>
+            </div>
+            <form v-if="currentQuestion">
+                <button
+                    v-for="answer in currentQuestion.answers"
+                    :index="currentQuestion.key"
+                    :key="answer"
+                    v-html="answer"
+                    @click.prevent="handleButtonClick"
+                ></button>
+            </form>
+            
+            <hr class="divider" />
+        </div>
     </div>
 </template>
 
@@ -31,8 +41,11 @@ export default {
         return {
             questions: [],
             loading: true,
-            index: 0,
-            visible: false
+            index: 11,
+            visible: false,
+            finished: false,
+            correct: [],
+            category: null
         }
     },
     computed: {
@@ -103,6 +116,7 @@ export default {
                     setTimeout(
                         function() {
                             this.index += 1;
+                            
                             let allButtons = document.querySelectorAll(`[index="${index}"]`);
                             for (let i = 0; i < allButtons.length; i++) {
                                 if (allButtons[i] === event.target) continue;
@@ -113,8 +127,15 @@ export default {
                         3000
                     );
                 }
+                if(this.index + 1 == 12) {
+                    setTimeout(() => {
+                        this.finished = true;
+                    }, 3000);
+                }
                 if(question.userAnswer === question.correct_answer) {
                     event.target.classList.add("rightAnswer");
+
+                    this.correct.push(this.index);
 
                     this.questions[index].rightAnswer = true;
                 } else {
@@ -148,7 +169,7 @@ export default {
     .title {
         font-size: 3rem;
         padding: 0.5rem;
-        color: rgb(153, 31, 153);
+        color: #eb009d;
         text-align: center;
     }
 
@@ -159,7 +180,7 @@ export default {
 
     .divider {
         margin: 0.5rem 0;
-        border: 1px solid rgba(102, 255, 166, 0.7);
+        border: 1px solid #eb009d;
         border-radius: 2px;
         box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     }
