@@ -26,6 +26,17 @@
                 </p>
                 <img src="/assets/code_snippet_vue.png">
                 <vue-button-component></vue-button-component>
+
+                <h4>Templates</h4>
+                <p>
+                    Vue gebruikt HTML-based template syntax dat je dingen kan renderen in de DOM met onderliggende Vue data, Vue templates kunnen ook opnieuw geladen worden zonder dat de browser gerefreshed moet worden.
+                </p>
+
+                <h4>Reactivity</h4>
+                <p>
+                    Vue heeft een reactivity systeem dat gebruik maakt van pure JavaScript objecten  en geoptimaliseerde re-rendering. Elk component houdt bij van zijn hergeactiveerde dependencies tijdens de rendering,
+                    dus het systeem weet wanneer hij opnieuw moet renderen en welke componenten hij moet herladen.
+                </p>
             </div>
         </div>
     </section>

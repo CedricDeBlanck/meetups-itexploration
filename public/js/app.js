@@ -2217,6 +2217,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     'vue-button-component': __webpack_require__(/*! ../ButtonComponent */ "./resources/js/components/ButtonComponent.vue").default
@@ -39852,7 +39863,23 @@ var render = function() {
           _vm._v(" "),
           _c("img", { attrs: { src: "/assets/code_snippet_vue.png" } }),
           _vm._v(" "),
-          _c("vue-button-component")
+          _c("vue-button-component"),
+          _vm._v(" "),
+          _c("h4", [_vm._v("Templates")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Vue gebruikt HTML-based template syntax dat je dingen kan renderen in de DOM met onderliggende Vue data, Vue templates kunnen ook opnieuw geladen worden zonder dat de browser gerefreshed moet worden.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("Reactivity")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Vue heeft een reactivity systeem dat gebruik maakt van pure JavaScript objecten  en geoptimaliseerde re-rendering. Elk component houdt bij van zijn hergeactiveerde dependencies tijdens de rendering,\n                dus het systeem weet wanneer hij opnieuw moet renderen en welke componenten hij moet herladen.\n            "
+            )
+          ])
         ],
         1
       )
