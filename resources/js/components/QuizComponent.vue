@@ -41,7 +41,7 @@ export default {
         return {
             questions: [],
             loading: true,
-            index: 11,
+            index: 0,
             visible: false,
             finished: false,
             correct: [],

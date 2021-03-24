@@ -2034,7 +2034,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       questions: [],
       loading: true,
-      index: 11,
+      index: 0,
       visible: false,
       finished: false,
       correct: [],
