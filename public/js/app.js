@@ -39502,9 +39502,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("button", { on: { click: _vm.onClick } }, [
-    _vm._v("Clicked " + _vm._s(_vm.count) + " times")
-  ])
+  return _c(
+    "button",
+    {
+      staticStyle: {
+        "background-color": "#ef024e",
+        border: "none",
+        "border-radius": "15px",
+        color: "white",
+        width: "300px",
+        height: "50px",
+        "font-size": "28px"
+      },
+      on: { click: _vm.onClick }
+    },
+    [_vm._v("Clicked " + _vm._s(_vm.count) + " times")]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
