@@ -9,3 +9,8 @@
 
 
 <p>Dit is een schoolproject voor het vak ITExploration gemaakt door Cédric De Blanck</p>
+
+<a href="http://meetups-itexploration.herokuapp.com/">Link naar Heroku site</a>
+
+<p>**NOTE**<p>
+<p>Use HTTP instead of HTTPS because there is a laravel problem, this site does not ask you for personal information!</p>
